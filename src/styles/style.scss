@@ -1,0 +1,310 @@
+@import './variable.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+button {
+  padding: 0.7rem 0.5rem;
+  margin: 1rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: $whiteSmoke;
+}
+
+.btn {
+  color: $whiteSmoke;
+  border: 0;
+  background-color: $primary;
+  padding: 5px 10px;
+  box-shadow: 0 15px 35px #3333ff33;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: filter 0.5s ease-in-out, transform 0.1s ease-in-out;
+  &:hover {
+    filter: brightness(1.5);
+  }
+  &:active {
+    transform: scale(1.09);
+  }
+}
+.btn0 {
+  box-shadow: 0 4px 6px -1px $yellowgreen, 0 2px 4px -2px #662222;
+  background-color: $greenyellow;
+  background-image: radial-gradient(circle, transparent 1%, #b7fd4d 1%);
+
+  background-position: center;
+  background-size: 12000%;
+  transition: background 0.6s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.1s ease-in-out;
+  &:active {
+    background-color: yellow;
+    background-size: 100%;
+
+    transition: background 0s;
+    transform: scale(1.09);
+  }
+  &:hover {
+    box-shadow: 0 10px 15px -3px $goldenrod, 0 4px 6px -4px $goldenrod;
+  }
+}
+.btn1 {
+  background-color: transparent;
+  color: $goldenrod;
+  border: $goldenrod 2px solid;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  font-size: 0.65rem;
+  transition: all 0.1s ease-in-out;
+  text-transform: uppercase;
+  &:hover {
+    color: $whiteSmoke;
+    border: $black 2px solid;
+  }
+}
+.span1 {
+  transition: all 0.1s ease-in-out;
+  background-color: $primary;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 25%;
+  height: 76%;
+  z-index: -1;
+  opacity: 0;
+}
+.btn1:hover .span1 {
+  transform: scaleY(4);
+  opacity: 1;
+}
+.span2 {
+  transition: all 0.4s ease-in-out;
+  background-color: $secondary;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 25px;
+  right: 0;
+  width: 69%;
+  height: 76%;
+  z-index: -1;
+  opacity: 0;
+}
+.btn1:hover .span2 {
+  transform: scaleY(4);
+  opacity: 1;
+}
+.span3 {
+  transition: all 0.6s ease-in-out;
+  background-color: $error;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 50px;
+  right: 0;
+  width: 25%;
+  height: 76%;
+  z-index: -1;
+  opacity: 0;
+}
+.btn1:hover .span3 {
+  transform: scaleY(4);
+  opacity: 1;
+}
+.span4 {
+  transition: all 0.8s ease-in-out;
+  background-color: $info;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 75px;
+  right: 0;
+  width: 29%;
+  height: 76%;
+  z-index: -1;
+  opacity: 0;
+}
+.btn1:hover .span4 {
+  transform: scaleY(4);
+  opacity: 1;
+}
+.btn2 {
+  border-radius: 1rem;
+  border: 2px solid $info;
+  color: black;
+  transition: all 0.6s ease;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  &:before {
+    content: '';
+    border-radius: 0.9rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    background-color: yellow;
+    transition: all 0.5s ease;
+  }
+  &:hover:before {
+    transition: all 0.5s ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+.error {
+  color: $error;
+  border-color: $error;
+  border-style: solid;
+}
+
+.notification {
+  color: $secondary;
+  border-color: $secondary;
+  border-style: dotted;
+}
+//Card sections
+//media query
+$breakPoints: (
+  'xs': 0,
+  'sm': 480px,
+  'md': 720px,
+  'lg': 980px,
+  'xl': 1200px,
+);
+
+@mixin xs {
+  @media (min-width: map-get($breakPoints,'xs')) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: map-get($breakPoints,'md')) {
+    @content;
+  }
+}
+
+.mainCard {
+  @include xs {
+    flex-direction: column;
+  }
+  @include md {
+    flex-direction: row;
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin myflex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin card($myWidth, $shadowSize) {
+  @include myflex;
+  flex-direction: column;
+  border: $base-border-thickness solid #ddd;
+  margin: $base-margin;
+  padding: $base-padding;
+  box-shadow: 3px $shadowSize $black;
+  width: $myWidth;
+}
+
+.card {
+  @include card(50%, 12px);
+}
+.card1 {
+  @include card(95%, 3px);
+
+  h1,
+  h2 {
+    color: $secondary;
+  }
+  h6 {
+    color: $error;
+  }
+  p {
+    color: $black;
+  }
+}
+//grid System
+@mixin grid($column, $row) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  grid-template-rows: repeat($row, 1fr);
+  gap: 0.5rem;
+  color: $whiteSmoke;
+}
+
+.myGrid {
+  @include grid(12, 12);
+  nav {
+    grid-column: 1/13;
+    @include myflex;
+    background-color: $primary;
+  }
+  .lsideBar {
+    @include xs {
+      grid-column: 1/13;
+      grid-row: 2/4;
+    }
+    @include md {
+      grid-column: 1/3;
+      grid-row: 2/12;
+    }
+
+    @include myflex;
+    background-color: $secondary;
+  }
+  .content {
+    @include xs {
+      grid-column: 1/13;
+      grid-row: 6/12;
+    }
+    @include md {
+      grid-column: 3/11;
+      grid-row: 2/12;
+    }
+    @include myflex;
+    background-color: $info;
+  }
+  .rsideBar {
+    @include xs {
+      grid-column: 1/13;
+      grid-row: 4/6;
+    }
+    @include md {
+      grid-column: 11/13;
+      grid-row: 2/12;
+    }
+    @include myflex;
+
+    background-color: $purple;
+  }
+  .footer {
+    grid-column: 1/13;
+    grid-row: 12/13;
+    @include myflex;
+
+    background-color: $primary;
+  }
+}

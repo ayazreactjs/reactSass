@@ -1,5 +1,5 @@
 {
-  "name": "mytailwind",
+  "name": "mysass",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build:css": "sass -s expanded -I src/styles src/styles/style.scss src/styles/css/style.css",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +35,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1"
   }
 }

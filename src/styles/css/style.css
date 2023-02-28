@@ -1,0 +1,386 @@
+/*#3333ff  */
+.text-primary {
+  color: #326de3;
+}
+
+.bg-primary {
+  background-color: #326de3;
+}
+
+.text-secondary {
+  color: #33ff33;
+}
+
+.bg-secondary {
+  background-color: #33ff33;
+}
+
+.text-error {
+  color: #ff3333;
+}
+
+.bg-error {
+  background-color: #ff3333;
+}
+
+.text-info {
+  color: #f6c31c;
+}
+
+.bg-info {
+  background-color: #f6c31c;
+}
+
+.text-yellow {
+  color: #ffff33;
+}
+
+.bg-yellow {
+  background-color: #ffff33;
+}
+
+.text-blue {
+  color: #3333ff;
+}
+
+.bg-blue {
+  background-color: #3333ff;
+}
+
+.text-black {
+  color: #2e242c;
+}
+
+.bg-black {
+  background-color: #2e242c;
+}
+
+.text-purple {
+  color: #663399;
+}
+
+.bg-purple {
+  background-color: #663399;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+button {
+  padding: 0.7rem 0.5rem;
+  margin: 1rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #f5f5f5;
+}
+
+.btn {
+  color: #f5f5f5;
+  border: 0;
+  background-color: #326de3;
+  padding: 5px 10px;
+  box-shadow: 0 15px 35px rgba(51, 51, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: filter 0.5s ease-in-out, transform 0.1s ease-in-out;
+}
+.btn:hover {
+  filter: brightness(1.5);
+}
+.btn:active {
+  transform: scale(1.09);
+}
+
+.btn0 {
+  box-shadow: 0 4px 6px -1px #9acd32, 0 2px 4px -2px #662222;
+  background-color: #adff2f;
+  background-image: radial-gradient(circle, transparent 1%, #b7fd4d 1%);
+  background-position: center;
+  background-size: 12000%;
+  transition: background 0.6s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+.btn0:active {
+  background-color: yellow;
+  background-size: 100%;
+  transition: background 0s;
+  transform: scale(1.09);
+}
+.btn0:hover {
+  box-shadow: 0 10px 15px -3px #daa520, 0 4px 6px -4px #daa520;
+}
+
+.btn1 {
+  background-color: transparent;
+  color: #daa520;
+  border: #daa520 2px solid;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  font-size: 0.65rem;
+  transition: all 0.1s ease-in-out;
+  text-transform: uppercase;
+}
+.btn1:hover {
+  color: #f5f5f5;
+  border: #2e242c 2px solid;
+}
+
+.span1 {
+  transition: all 0.1s ease-in-out;
+  background-color: #326de3;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 25%;
+  height: 76%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.btn1:hover .span1 {
+  transform: scaleY(4);
+  opacity: 1;
+}
+
+.span2 {
+  transition: all 0.4s ease-in-out;
+  background-color: #33ff33;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 25px;
+  right: 0;
+  width: 69%;
+  height: 76%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.btn1:hover .span2 {
+  transform: scaleY(4);
+  opacity: 1;
+}
+
+.span3 {
+  transition: all 0.6s ease-in-out;
+  background-color: #ff3333;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 50px;
+  right: 0;
+  width: 25%;
+  height: 76%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.btn1:hover .span3 {
+  transform: scaleY(4);
+  opacity: 1;
+}
+
+.span4 {
+  transition: all 0.8s ease-in-out;
+  background-color: #f6c31c;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 75px;
+  right: 0;
+  width: 29%;
+  height: 76%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.btn1:hover .span4 {
+  transform: scaleY(4);
+  opacity: 1;
+}
+
+.btn2 {
+  border-radius: 1rem;
+  border: 2px solid #f6c31c;
+  color: black;
+  transition: all 0.6s ease;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.btn2:before {
+  content: "";
+  border-radius: 0.9rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  background-color: yellow;
+  transition: all 0.5s ease;
+}
+.btn2:hover:before {
+  transition: all 0.5s ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+.error {
+  color: #ff3333;
+  border-color: #ff3333;
+  border-style: solid;
+}
+
+.notification {
+  color: #33ff33;
+  border-color: #33ff33;
+  border-style: dotted;
+}
+
+.mainCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 0) {
+  .mainCard {
+    flex-direction: column;
+  }
+}
+@media (min-width: 720px) {
+  .mainCard {
+    flex-direction: row;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  box-shadow: 3px 12px #2e242c;
+  width: 50%;
+}
+
+.card1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  box-shadow: 3px 3px #2e242c;
+  width: 95%;
+}
+.card1 h1,
+.card1 h2 {
+  color: #33ff33;
+}
+.card1 h6 {
+  color: #ff3333;
+}
+.card1 p {
+  color: #2e242c;
+}
+
+.myGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 0.5rem;
+  color: #f5f5f5;
+}
+.myGrid nav {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #326de3;
+}
+.myGrid .lsideBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #33ff33;
+}
+@media (min-width: 0) {
+  .myGrid .lsideBar {
+    grid-column: 1/13;
+    grid-row: 2/4;
+  }
+}
+@media (min-width: 720px) {
+  .myGrid .lsideBar {
+    grid-column: 1/3;
+    grid-row: 2/12;
+  }
+}
+.myGrid .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6c31c;
+}
+@media (min-width: 0) {
+  .myGrid .content {
+    grid-column: 1/13;
+    grid-row: 6/12;
+  }
+}
+@media (min-width: 720px) {
+  .myGrid .content {
+    grid-column: 3/11;
+    grid-row: 2/12;
+  }
+}
+.myGrid .rsideBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #663399;
+}
+@media (min-width: 0) {
+  .myGrid .rsideBar {
+    grid-column: 1/13;
+    grid-row: 4/6;
+  }
+}
+@media (min-width: 720px) {
+  .myGrid .rsideBar {
+    grid-column: 11/13;
+    grid-row: 2/12;
+  }
+}
+.myGrid .footer {
+  grid-column: 1/13;
+  grid-row: 12/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #326de3;
+}
+
+/*# sourceMappingURL=style.css.map */

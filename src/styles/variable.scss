@@ -1,0 +1,36 @@
+// my Theme colors
+$primary: #326de3; /*#3333ff  */
+$secondary: #33ff33;
+$error: #ff3333;
+$info: #f6c31c;
+$black: #2e242c;
+$goldenrod: #daa520;
+$whiteSmoke: #f5f5f5;
+$yellowgreen: #9acd32;
+$greenyellow: #adff2f;
+$purple: #663399;
+//my palette
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'error': $error,
+  'info': $info,
+  'yellow': #ffff33,
+  'blue': #3333ff,
+  'black': #2e242c,
+  'purple': #663399,
+);
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value;
+  }
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
+
+//spacing & borders
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
