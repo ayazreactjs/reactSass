@@ -44,6 +44,7 @@ function App() {
           to certain elements using the myflex mixin.
         </p>
         <h6>Unleash the Full Potential of Sass: Explore My Code on GitHub!</h6>
+        <h1>https://github.com/ayazreactjs/reactSass</h1>
       </div>
       <div className="mainCard">
         <div className="card">
