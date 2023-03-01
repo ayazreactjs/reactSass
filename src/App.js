@@ -80,7 +80,10 @@ function App() {
         <div className="lsideBar">sideBar</div>
         <div className="content">Content</div>
         <div className="rsideBar">sideBar</div>
-        <div className="footer">footer</div>
+        <div className="footer error" style={{ textAlign: 'center' }}>
+          footer <br />
+          This is sample code not for use
+        </div>
       </div>
     </div>
   )
