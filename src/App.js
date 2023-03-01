@@ -85,6 +85,16 @@ function App() {
           This is sample code not for use
         </div>
       </div>
+      <div class="container">
+        <p>sample color palette using @for function and mixins</p>
+        <div class="box">
+          <div class="subBox0">0</div>
+          <div class="subBox1">1</div>
+          <div class="subBox2">2</div>
+          <div class="subBox3">3</div>
+          <div class="subBox4">4</div>
+        </div>
+      </div>
     </div>
   )
 }

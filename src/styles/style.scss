@@ -308,3 +308,45 @@ $breakPoints: (
     background-color: $primary;
   }
 }
+//Color Code
+@mixin container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+@mixin box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+  [class^='subBox'] {
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+  }
+}
+//my Function for Colors
+@function myColorFun($hue, $sat, $lig, $i) {
+  @return hsl($hue + ($i * 2), $sat * 1% - ($i * 10), $lig * 1% + ($i * 5));
+}
+.container {
+  @include container;
+  .box {
+    @include box;
+    @for $i from 0 through 4 {
+      [class^='subBox#{$i}'] {
+        background-color: myColorFun(120, 100, 60, $i);
+      }
+    }
+  }
+  p {
+    width: 50%;
+    text-align: center;
+  }
+}

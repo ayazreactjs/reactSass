@@ -383,4 +383,46 @@ button {
   background-color: #326de3;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.container .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+}
+.container .box [class^=subBox] {
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+}
+.container .box [class^=subBox0] {
+  background-color: hsl(120, 100%, 60%);
+}
+.container .box [class^=subBox1] {
+  background-color: hsl(122, 90%, 65%);
+}
+.container .box [class^=subBox2] {
+  background-color: hsl(124, 80%, 70%);
+}
+.container .box [class^=subBox3] {
+  background-color: hsl(126, 70%, 75%);
+}
+.container .box [class^=subBox4] {
+  background-color: hsl(128, 60%, 80%);
+}
+.container p {
+  width: 50%;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
